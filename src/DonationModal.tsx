@@ -9,7 +9,7 @@ const jar = new Nutjar(
   ["wss://relay.damus.io"],
 );
 
-function Content({ close }) {
+function Content({ close }: { close: () => void }) {
   const [invoice, setInvoice] = useState("");
   const [isPaid, setIsPaid] = useState(false);
   const [isError, setIsError] = useState("");
@@ -95,7 +95,7 @@ function Content({ close }) {
   );
 }
 
-function DonationModal({ close }) {
+function DonationModal({ close }: { close: () => void }) {
   return createPortal(
     <Content close={close} />,
     document.getElementById("modal")!,
