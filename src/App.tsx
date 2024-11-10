@@ -7,7 +7,7 @@ function App() {
     <>
       <nav className="w-full bg-zinc-700 flex items-center justify-between p-4">
         <p className="font-bold text-xl">nutjar.js demo</p>
-        <a>GitHub</a>
+        <a href="https://github.com/Egge21M/nutjar-demo">GitHub</a>
       </nav>
       <main className="max-w-lg p-4 flex flex-col gap-4">
         <h1 className="text-3xl font-bold">Lorem Ipsum</h1>
