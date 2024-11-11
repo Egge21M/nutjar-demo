@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Nutjar } from "nutjar.js";
+import { Nip17Transport, Nutjar } from "nutjar.js";
 import QRCode from "react-qr-code";
 
 const jar = new Nutjar(
   "https://mint.minibits.cash/Bitcoin",
   "npub1mhcr4j594hsrnen594d7700n2t03n8gdx83zhxzculk6sh9nhwlq7uc226",
-  ["wss://relay.damus.io"],
+  new Nip17Transport(["wss://relay.damus.io", "wss://nostr.mom"]),
 );
 
 function Content({ close }: { close: () => void }) {
