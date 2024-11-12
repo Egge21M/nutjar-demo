@@ -61,8 +61,18 @@ function Content({ close }: { close: () => void }) {
               }
               if (invoice) {
                 return (
-                  <div className="p-2 rounded bg-white">
-                    <QRCode value={invoice} />
+                  <div className="flex flex-col gap-2">
+                    <div className="p-2 rounded bg-white">
+                      <QRCode value={invoice} />
+                    </div>
+                    <button
+                      className="px-2 py-1 bg-zinc-200 text-black rounded hover:bg-zinc-300 active:bg-zinc-400"
+                      onClick={() => {
+                        window.navigator.clipboard.writeText(invoice);
+                      }}
+                    >
+                      Copy Invoice
+                    </button>
                   </div>
                 );
               }
