@@ -10,9 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "nutjar.js": "^0.2.1",
+    "nutjar.js": "^0.2.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
     "react-qr-code": "^2.0.15"
   },
   "devDependencies": {
